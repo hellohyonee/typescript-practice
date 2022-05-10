@@ -26,12 +26,15 @@ class Dict {
       this.words[word.term] = word.def
     }
   }
+  static hello () {  // JS문법. static 메소드 사용 가능: 클래스의 인스턴스 없이 호출 가능, 클래스가 인스턴스화되면 호출 불가.
+    return 'hello';
+  }
 }
 
 class Word { // class를 만들어서 type처럼 사용 가능, typescript의 장점!!!
   constructor(
-      public term: string, // 단어
-      public def: string   // 정의
+      public readonly term: string, // 단어 // readonly 읽기 전용. JS에서 나타나지는 않지만 읽기전용.
+      public readonly def: string   // 정의
   ) { }
 }
 
